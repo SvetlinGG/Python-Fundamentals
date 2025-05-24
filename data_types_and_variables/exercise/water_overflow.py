@@ -5,10 +5,12 @@ fill = 0
 for _ in range(number_of_lines):
     liters = int(input())
 
-    if liters <= capacity:
+    if capacity - liters >= 0:
+        capacity -= liters
         fill += liters
 
-print("Insufficient capacity!")
-print(f'{fill}')
+    else:
+        print("Insufficient capacity!")
+        print(f'{fill}')
 
 
