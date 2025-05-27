@@ -1,8 +1,6 @@
-first_num = int(input())
-second_num = int(input())
+number_one = int(input())
+number_two = int(input())
 
-third_num = first_num
-
-if first_num < second_num:
-    
+print(f"Before:\na = {number_one}\nb = {number_two}")
+print(f"After:\na = {number_two}\nb = {number_one}")
 
