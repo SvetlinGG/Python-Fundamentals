@@ -1,9 +1,12 @@
 lines = int(input())
 sum = []
 
-for _ in range(lines):
+for _ in range(1, lines + 1):
     char = input()
-    if char == '(' and char == ')':
-        print('BALANCED')
-    else:
-        print('UNBALANCED')
+    if '(' in char or ')' in char:
+        sum.append(char)
+
+if '(' in sum and ')' in sum:
+    print('BALANCED')
+elif '(' in sum:
+    print('UNBALANCED')
