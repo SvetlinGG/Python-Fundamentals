@@ -1,9 +1,14 @@
 letters = input().split()
-
-length = len(letters) // 2
 count = int(input())
-first_half = letters[:length]
-second_half = letters[length:]
-arr = []
-arr = zip(first_half, second_half)
-print(*arr)
+length = len(letters)
+mid = int(length / 2)
+
+for i in range(count):
+    arr = []
+    for p in range(0, mid):
+        arr.append(letters[p])
+        arr.append(letters[mid])
+        mid += 1
+    letters = arr
+    mid = int(length / 2)
+print(arr)
