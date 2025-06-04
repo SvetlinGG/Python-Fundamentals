@@ -1,10 +1,9 @@
 integers = input().split()
-num = int(input())
+count = int(input())
+current_count = 0
 arr = []
 for n in integers:
-
     numbers = int(n)
     arr.append(numbers)
-arr.sort(reverse=True)
-arr.remove(num)
-print(arr)
+for num in arr:
+    
