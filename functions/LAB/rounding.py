@@ -1,15 +1,9 @@
 
-numbers = input().split(', ')
+numbers = input().split()
 
 def rounding(numbers):
 
-    arr = []
-    for num in numbers:
-        num = int(num)
-        arr.append(num).map(round(num, 2))
-
-
-
-    return print(arr)
+    rounded = [round(float(n)) for n in numbers]
+    return print(f'{rounded}')
 
 rounding(numbers)
