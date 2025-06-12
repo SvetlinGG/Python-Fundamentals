@@ -8,7 +8,10 @@ for _ in range(train_wagons):
 for operation in arr:
     operation = operation.split(' ')
     if operation[0] == 'add':
-        train.append(operation[1])
+        train[-1] = int(operation[1])
+    if operation[0] == 'insert':
+        train.pop(0)
+        train.insert(int(operation[1]), int(operation[2]))
 print(train)
 
 
