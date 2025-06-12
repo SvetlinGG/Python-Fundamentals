@@ -15,5 +15,6 @@ while True:
             train.pop(int(operation[1]))
             train.insert(int(operation[1]), int(operation[2]))
 print(train)
+print(command)
 
 
