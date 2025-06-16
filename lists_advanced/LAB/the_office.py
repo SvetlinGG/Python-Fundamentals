@@ -1,18 +1,20 @@
 employees = input().split(' ')
 happiness_factor = int(input())
-int_employees = map(int, employees)
-mapping = map(lambda x: x * happiness_factor, int_employees)
-arr = []
-sum = 0
-for i in mapping:
-    arr.append(i)
-for happy in arr:
-    sum += happy
-    average = sum / len(arr)
 
-    if happy >= average:
-        newArr = []
-        newArr.append(happy)
-    print(f'Score: {newArr}/{len(arr)}. Employees are not happy!"')
+
+arr = [int(e) * happiness_factor for e in employees]
+
+
+average = sum(arr) / len(arr)
+
+
+newArr = [e for e in arr if e >= average]
+
+
+if len(newArr) >= len(arr) / 2:
+    print(f"Score: {len(newArr)}/{len(arr)}. Employees are happy!")
+else:
+    print(f"Score: {len(newArr)}/{len(arr)}. Employees are not happy!")
+
 
 
