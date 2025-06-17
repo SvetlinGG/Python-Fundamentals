@@ -8,4 +8,3 @@ for _ in range(rooms):
         if chair > int(person):
             positive += 1
 print(positive)
-
