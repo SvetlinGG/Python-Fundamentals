@@ -17,3 +17,8 @@ for num in numbers:
         arr_40.append(num)
     else:
         arr_50.append(num)
+print(f"Group of 's: {arr_10}")
+print(f"Group of 's: {arr_20}")
+print(f"Group of 's: {arr_30}")
+print(f"Group of 's: {arr_40}")
+print(f"Group of 's: {arr_50}")
