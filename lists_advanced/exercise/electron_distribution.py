@@ -1,4 +1,16 @@
 
+count_electrons = int(input())
+n = 1
+result = []
+
+while count_electrons > 0:
+    capacity = 2 * n ** 2
+    electrons = min(count_electrons, capacity)
+    result.append(electrons)
+    count_electrons -= electrons
+    n += 1
+
+print(result)
 
 # count_electrons = int(input())
 # electron_list = [1, 2, 3, 4]
