@@ -17,8 +17,9 @@ for num in numbers:
         arr_40.append(num)
     else:
         arr_50.append(num)
-print(f"Group of 's: {arr_10}")
-print(f"Group of 's: {arr_20}")
-print(f"Group of 's: {arr_30}")
-print(f"Group of 's: {arr_40}")
-print(f"Group of 's: {arr_50}")
+
+print(f"Group of {1 * 10}'s: {arr_10}")
+print(f"Group of {2 * 10}'s: {arr_20}")
+print(f"Group of {3 * 10}'s: {arr_30}")
+print(f"Group of {4 * 10}'s: {arr_40}")
+print(f"Group of {5 * 10}'s: {arr_50}")
