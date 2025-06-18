@@ -1,10 +1,16 @@
 rooms = int(input())
-positive = 0
-negative = 0
+total_chairs = 0
+free_chairs = 0
+total_person = 0
+
 
 for _ in range(rooms):
-    info = input().split(' ')
-    for chair, person in enumerate(info):
-        if chair > int(person):
-            positive += 1
-print(positive)
+
+    chair, person = input().split(' ')
+    total_chairs += len(chair)
+    total_person += int(person)
+    if total_chairs >= total_person:
+        free_chairs = total_chairs - total_person
+print(f'Game On, {free_chairs} free chairs left')
+
+
