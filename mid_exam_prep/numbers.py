@@ -1,18 +1,14 @@
-numbers = [int(x) for x in input().split()]
+numbers = [int(x) for x in input().split(' ')]
 average = sum(numbers) / len(numbers)
-arr = []
-sorted_arr = []
-for num in numbers:
 
-    if num > average:
-        arr.append(num)
-        sorted_arr = sorted(arr)
-        if len(sorted_arr) > 4:
-            break
+above_average = [num for num in numbers if num > average]
 
-if len(arr) == 0:
+if not above_average:
     print('No')
+else:
+    top_5 = sorted(above_average, reverse=True)[:5]
+    print(" ".join(map(str, top_5)))
 
-print(" ".join(map(str, sorted_arr[::-1])))
+
 
 
