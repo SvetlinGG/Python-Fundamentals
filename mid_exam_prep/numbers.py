@@ -1,17 +1,18 @@
 numbers = [int(x) for x in input().split()]
-length = len(numbers)
+average = sum(numbers) / len(numbers)
 arr = []
-suma = 0
+sorted_arr = []
 for num in numbers:
-    suma += num
-    average = suma / length
+
     if num > average:
         arr.append(num)
-    if len(arr) >= 5:
-        break
-    if len(arr) == 0:
-        print('No')
+        sorted_arr = sorted(arr)
+        if len(sorted_arr) > 4:
+            break
 
-print(" ".join(map(str, arr)))
-print(average)
-print(suma)
+if len(arr) == 0:
+    print('No')
+
+print(" ".join(map(str, sorted_arr[::-1])))
+
+
