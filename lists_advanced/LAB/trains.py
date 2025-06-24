@@ -1,5 +1,5 @@
 wagons  = int(input())
-rain = [0, 0, 0, 0]
+train = [0, 0, 0, 0]
 
 while True:
 
@@ -8,7 +8,11 @@ while True:
 
     if command == 'End':
         break
-    print(command[1])
+    if command[0] == 'add':
+        train[-1] += int(command[1])
+    print(train)
+
+
 
 
 
