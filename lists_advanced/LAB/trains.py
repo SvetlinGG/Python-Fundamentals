@@ -1,3 +1,15 @@
+wagons  = int(input())
+rain = [0, 0, 0, 0]
+
+while True:
+
+    command = input().split()
+
+
+    if command == 'End':
+        break
+    print(command[1])
+
 
 
 
