@@ -1,14 +1,17 @@
 
-notes = [0]
+command = input()
+result = []
+
+while command != 'End':
+
+    pos, task = command.split('-')
+    result.append([int(pos), task])
+    command = input()
+print([do[1] for do in sorted(result, key=lambda x: x[0])])
 
 
-for _ in notes:
 
-    command = input().split('-')
 
-    for num, token in enumerate(command):
-        filtered = list(filter(lambda num: num == num, command))
-        print(' '.join(filtered))
 
 
 
