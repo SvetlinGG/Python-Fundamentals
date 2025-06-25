@@ -16,6 +16,7 @@ while True:
     elif command[0] == 'leave':
         index = int(command[1])
         train[index] -= int(command[2])
+    #command = input()
         print(train)
 
 
