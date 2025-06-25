@@ -12,12 +12,12 @@ while True:
         train[-1] += int(command[1])
     elif command[0] == 'insert':
         index = int(command[1])
-        train[index] = int(command[2])
+        train[index] += int(command[2])
     elif command[0] == 'leave':
         index = int(command[1])
         train[index] -= int(command[2])
     #command = input()
-        print(train)
+    print(train)
 
 
 
