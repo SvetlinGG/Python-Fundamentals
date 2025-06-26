@@ -1,3 +1,6 @@
+names = input().split(', ')
+names.sort(key = len, reverse=True)
+print(names)
 
 
 # names = input().split(', ')
