@@ -7,11 +7,16 @@
 #
 # print(even_list)
 
-numbers = input().split(', ')
-arr = []
-for number in numbers:
+# numbers = input().split(', ')
+# arr = []
+# for number in numbers:
+#
+#     if int(number) % 2 == 0:
+#         index = numbers.index(number)
+#         arr.append(index)
+# print(arr)
 
-    if int(number) % 2 == 0:
-        index = numbers.index(number)
-        arr.append(index)
-print(arr)
+main_list = [int(n) for n in input().split(", ")]
+even_list = [ i for i, n in enumerate(main_list) if n % 2 == 0 ]
+print(even_list)
+
