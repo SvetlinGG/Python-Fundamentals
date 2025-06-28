@@ -16,9 +16,20 @@ class Zoo:
         elif species == 'bird':
              self.birds.append(name)
 
+        Zoo._animals += 1
+
     def get_info(self, species):
-        pass
+        result = ""
+        if species == 'mammal':
+            result += f"Mammals in {self.name}: {", ".join(self.mammals)}\n"
+        elif species == 'fish':
+            result += f"Fishes in {self.name}: {", ".join(self.fishes)}\n"
+        elif species == 'bird':
+            result += f"Birds in {self.name}: {", ".join(self.birds)}\n"
+
+        result += f'Total animals: {Zoo._animals}'
+        return result
 zoo_name = input()
 zoo = Zoo(zoo_name)
-total_animals = 0
-for i in range(number):
+count = int(input)
+for i in range(count):
