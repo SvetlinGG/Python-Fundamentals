@@ -1,16 +1,15 @@
 
 
-class Car:
+class Person:
 
-    def __init__(self, color, brand):
+    def __init__(self, height, color, age):
+        self.height = height
         self.color = color
-        self.brand = brand
+        self.age = age
+    def human(self):
+        print(f'I am a {person.height} meter height, with {person.color} eyes, and {person.age} years old')
 
-    def drive(self):
-        print(f'The{self.color} {self.brand} is driving')
+person = Person(1.75,'green', 54)
+person.human()
 
-    def refuel(self):
-        print(f'The {self.color} {self.brand} is refueling with petrol')
 
-car_1 = Car('black', 'Mercedes')
-car_1.drive()
