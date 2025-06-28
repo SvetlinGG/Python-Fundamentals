@@ -9,9 +9,16 @@ class Zoo:
         self.birds = []
 
     def add_animals(self, species, name):
-        pass
+         if species == 'mammal':
+             self.mammals.append(name)
+        elif species == 'fish':
+             self.fishes.append(name)
+        elif species == 'bird':
+             self.birds.append(name)
 
     def get_info(self, species):
         pass
-name = input()
-number = int(input())
+zoo_name = input()
+zoo = Zoo(zoo_name)
+total_animals = 0
+for i in range(number):
