@@ -13,15 +13,12 @@ class Email:
         return f'{self.sender} says to {self.receiver}: {self.content}. Sent: {self.is_sent}'
 
 emails = []
-line = input()
-while line != 'Stop':
-    info = line.split(' ')
-    sender = info[0]
-    receiver = info[1]
-    content = info[2]
-    email = Email(sender, receiver, content)
+
+while (data := input()) != 'Stop':
+    sender_, receiver_, content_ = data.split()
+    email = Email(sender_, receiver_, content_)
     emails.append(email)
-    line = input()
+
 
 send_email = [int(x) for x in input().split(', ')]
 for x in send_email:
