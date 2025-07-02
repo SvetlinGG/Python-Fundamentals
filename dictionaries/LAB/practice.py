@@ -21,7 +21,7 @@ student = {
     'major': 'Developer',
     'language': 'Python',
 }
-student['grade'] = 'Exellent'
+student['grade'] = 'Excellent'
 print(student)
 # print(student.get('name'))
 # print(student.get('language'))
