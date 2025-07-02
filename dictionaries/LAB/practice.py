@@ -19,8 +19,9 @@ student = {
     'name': 'Ivan',
     'age': 22,
     'major': 'Developer',
-    'language': 'Python'
+    'language': 'Python',
 }
+student['grade'] = 'Exellent'
 print(student)
 # print(student.get('name'))
 # print(student.get('language'))
