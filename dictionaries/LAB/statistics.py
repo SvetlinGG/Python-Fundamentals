@@ -1,12 +1,18 @@
 
-products = input().split(': ')
-materials = {}
-while products != 'statistics':
-    products = input().split(': ')
 
-    key = products[0]
-    value = products[1]
-    materials[key] = int(value)
-    if key == 'statistics':
+materials = {}
+while True:
+    command = input()
+    if command == 'statistics':
         break
-print(len(materials.keys()))
+
+    product, quantity = command.split(': ')
+
+    key = product
+    value = int(quantity)
+    materials[key] = value
+
+    count_all_products = len(materials.keys())
+    sum_all_quantities = sum(materials.values())
+print(count_all_products)
+print(sum_all_quantities)
