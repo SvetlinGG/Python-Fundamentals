@@ -16,3 +16,4 @@ while True:
     sum_all_quantities = sum(materials.values())
 print(count_all_products)
 print(sum_all_quantities)
+print(sum_all_quantities)
