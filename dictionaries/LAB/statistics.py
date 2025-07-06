@@ -1,19 +1,24 @@
 
-
+command = input()
 materials = {}
-while True:
+while command != 'statistics':
     command = input()
-    if command == 'statistics':
-        break
-
+while command != 'statistics':
     product, quantity = command.split(': ')
 
     key = product
     value = int(quantity)
-    materials[key] = value
 
-    count_all_products = len(materials.keys())
-    sum_all_quantities = sum(materials.values())
-print(count_all_products)
-print(sum_all_quantities)
-print(sum_all_quantities)
+    if product not in materials:
+        materials[product] = 0
+        materials[product] += value
+print('Products in stock')
+
+for (key, value) in materials.items():
+    print(f'- {key}: {value}')
+
+print(f'Total Products: {len(materials.keys())}')
+print(f'Total Quantity: {sum(materials.values())}')
+
+
+
