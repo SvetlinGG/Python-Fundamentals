@@ -1,9 +1,13 @@
 
-command = input()
+
 materials = {}
-while command != 'statistics':
+
+while True:
+
     command = input()
-while command != 'statistics':
+    if command == 'statistics':
+        break
+
     product, quantity = command.split(': ')
 
     key = product
@@ -11,8 +15,8 @@ while command != 'statistics':
 
     if product not in materials:
         materials[product] = 0
-        materials[product] += value
-print('Products in stock')
+    materials[product] += value
+print('Products in stock:')
 
 for (key, value) in materials.items():
     print(f'- {key}: {value}')
