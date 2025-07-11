@@ -7,14 +7,11 @@ sum_two = 1
 if len(total_word_1) > len(total_word_2):
     dif_one = len(total_word_1) - len(total_word_2)
     for one in total_word_1[:-dif_one]:
-        sum_one *= one
-        sum_one = sum_one + total_word_1[:-dif_one]
-        print(sum_one)
+        sum_one *= one #+ total_word_1[-dif_one]
 else:
     dif_two = len(total_word_2) - len(total_word_1)
     for two in total_word_2[:-dif_two]:
-        sum_two *= two
-        sum_two = sum_two + total_word_2[:-dif_two]
+        sum_two *= two #+ total_word_2[-dif_two]
 total = sum_one + sum_two
 print(total)
 
