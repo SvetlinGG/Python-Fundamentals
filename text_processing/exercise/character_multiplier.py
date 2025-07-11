@@ -6,5 +6,5 @@ total_word_2 = [ord(second) for second in words[1]]
 if len(total_word_1) > len(total_word_2):
     pass
 else:
-    total_word_2 = total_word_2[:len(total_word_2)]
+    pass
 print(total_word_1[0] * total_word_2[0])
