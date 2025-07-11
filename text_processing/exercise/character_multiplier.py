@@ -1,10 +1,43 @@
 
 words = input().split()
-sum = words[0] + words[1]
 total_word_1 = [ord(first) for first in words[0]]
 total_word_2 = [ord(second) for second in words[1]]
+sum_one = 1
+sum_two = 1
 if len(total_word_1) > len(total_word_2):
-    pass
+    dif_one = len(total_word_1) - len(total_word_2)
+    for one in total_word_1[:-dif_one]:
+        sum_one *= one
+        sum_one = sum_one + total_word_1[:-dif_one]
+        print(sum_one)
 else:
-    pass
-print(total_word_1[0] * total_word_2[0])
+    dif_two = len(total_word_2) - len(total_word_1)
+    for two in total_word_2[:-dif_two]:
+        sum_two *= two
+        sum_two = sum_two + total_word_2[:-dif_two]
+total = sum_one + sum_two
+print(total)
+
+# words = input().split()
+# word1 = words[0]
+# word2 = words[1]
+#
+# ascii_1 = [ord(ch) for ch in word1]
+# ascii_2 = [ord(ch) for ch in word2]
+#
+# min_len = min(len(word1), len(word2))
+# max_len = max(len(word1), len(word2))
+#
+# total = 0
+# for i in range(min_len):
+#     total += ascii_1[i] * ascii_2[i]
+#
+# if len(word1) > len(word2):
+#     for i in range(min_len, max_len):
+#         total += ascii_1[i]
+# else:
+#     for i in range(min_len, max_len):
+#         total += ascii_2[i]
+#
+# print(total)
+
