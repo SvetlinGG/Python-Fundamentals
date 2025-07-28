@@ -1,17 +1,14 @@
 
 number_of_cars = int(input())
 
-while (command := input()) != 'Stop':
+car_info = {}
 
-    car, mileage, fuel = command.split('|')
-
-    print(car)
-    print(mileage)
-    print(fuel)
-
-    command = input()
-    operation, car, distance, fuel = command.split(':')
-    print(operation)
-    print(car)
-    print(distance)
-    print(fuel)
+class Car:
+    def __init__(self, name):
+        self.name = name
+        self.mileage = 0
+        self.fuel = 0
+    def add_mileage(self, mileage):
+        self.mileage += mileage
+    def add_fuel(self, fuel):
+        self.fuel += fuel
