@@ -35,7 +35,29 @@ class Car:
         if self.mileage < 10000:
             self.mileage = 10000
             return
-        print(f'"{self.name} mileage decreased by {kilometers} kilometers')
+        print(f'{self.name} mileage decreased by {kilometers} kilometers')
     def __repr__(self):
         return f"{self.name} -> Mileage: {self.mileage} kms, Fuel in the tank: {self.fuel} lt."
+for car in range(number_of_cars):
+    car_name, mileage, fuel = [ int(x) if x.isdigit() else x for x in input().split('|')]
+    car_info[car_name] = car_info.get(car_name, Car(car_name))
+    car_info[car_name].add_mileage(mileage)
+    car_info[car_name].add_fuel(fuel)
+
+command = input()
+while command != 'Stop':
+    command_type, car_name, *info = [int(x) if x.isdigit() else x for x in command.split(' : ')]
+    if command_type == 'Drive':
+        distance, fuel = info
+        car_info[car_name].drive(distance, fuel)
+    elif command_type == 'Refuel':
+        fuel = info[0]
+        car_info[car_name].refuel(fuel)
+    elif command_type == 'Revert':
+        kilometers = info[0]
+        car_info[car_name].revert(kilometers)
+    command = input()
+
+for car in car_info.values():
+    print(car)
 
