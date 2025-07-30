@@ -1,16 +1,25 @@
 
-activation_key = input()
+raw_activation_key = input()
 
-def contains(substring, activation_key):
-    if substring in activation_key:
-        return f'{activation_key} contains {substring}'
-    else:
-        return f'Substring not found!'
-def flipper(activation_key, start_index, end_index):
+command = input().split('>>>')
+
+while command[0] != 'Generate':
+
+    if operation == 'Contains':
+        operation, substring = command[0], command[1]
+        if substring in raw_activation_key:
+            print(f'{raw_activation_key} contains {substring}.')
+        else:
+            print(f'Substring not found!')
+    elif operation == 'Flip':
+        operation, letter, start_index, end_index = command[0], command[1], command[2], command[3]
 
 
 
 
 
-while command != 'Generate':
+
+
+
+
 
