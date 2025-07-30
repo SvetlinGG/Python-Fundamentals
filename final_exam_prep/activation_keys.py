@@ -13,6 +13,16 @@ while command[0] != 'Generate':
             print(f'Substring not found!')
     elif operation == 'Flip':
         operation, letter, start_index, end_index = command[0], command[1], command[2], command[3]
+        if letter == 'Upper':
+            result = raw_activation_key[:start_index] + raw_activation_key[start_index:end_index].upper() + raw_activation_key[end_index:]
+            print(result)
+        elif letter == 'Lower':
+            result = raw_activation_key[:start_index] + raw_activation_key[start_index:end_index].lower() + raw_activation_key[end_index:]
+            print(result)
+    elif operation == 'Slice':
+        operation, start_index, end_index = command[0], command[1], command[2]
+        result = raw_activation_key[:start_index] + raw_activation_key[end_index:]
+
 
 
 
