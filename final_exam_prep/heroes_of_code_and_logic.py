@@ -32,18 +32,18 @@ while command != 'End':
         current_hp = heroes[hero_name]['HP']
         current_hp -= damage
         if heroes[hero_name]['HP'] > 0:
-            print(f'{hero_name} was hit for {damage} HP by {attacker} and now has {current_hp} HP left!"')
+            print(f'{hero_name} was hit for {damage} HP by {attacker} and now has {current_hp} HP left!')
         else:
-            print(f'{hero_name} has been killed by {attacker}!"')
+            print(f'{hero_name} has been killed by {attacker}!')
     elif command_type == 'CastSpell':
         mp_needed = int(operation[2])
         spell_name = operation[3]
         current_mp = heroes[hero_name]['MP']
         if current_mp > mp_needed:
             mana_points_left = current_mp - mp_needed
-            print(f'{hero_name} has successfully cast {spell_name} and now has {mana_points_left} MP!"')
+            print(f'{hero_name} has successfully cast {spell_name} and now has {mana_points_left} MP!')
         else:
-            print(f'{hero_name} does not have enough MP to cast {spell_name}!"')
+            print(f'{hero_name} does not have enough MP to cast {spell_name}!')
     command = input()
 for hero, stats in heroes.items():
     print(f'{hero}')
