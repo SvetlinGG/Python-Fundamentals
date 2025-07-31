@@ -44,7 +44,13 @@ while command != 'End':
             print(f'{hero_name} has successfully cast {spell_name} and now has {mana_points_left} MP!"')
         else:
             print(f'{hero_name} does not have enough MP to cast {spell_name}!"')
-
-
     command = input()
+for hero, stats in heroes.items():
+    print(f'{hero}')
+    print(f'  HP: {stats["HP"]}')
+    print(f'  MP: {stats["MP"]}')
+
+
+
+
 
