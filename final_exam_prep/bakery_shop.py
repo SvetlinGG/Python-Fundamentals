@@ -29,9 +29,9 @@ while True:
             if food[food_type] == 0:
                 del food[food_type]
 
-    # Показваме наличната храна
-    for item, qty in food.items():
-        print(f"{item}: {qty}")
+
+for item, qty in food.items():
+    print(f'{item}: {qty}')
 
 
 
