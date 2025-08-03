@@ -22,7 +22,8 @@ while command[0] != 'Done':
         else:
             print(False)
     elif operation == 'Uppercase':
-        print(main_string.upper())
+        main_string = main_string.upper()
+        print(main_string)
     elif operation == 'FindIndex':
         char = command[1]
         print(main_string.find(char))
